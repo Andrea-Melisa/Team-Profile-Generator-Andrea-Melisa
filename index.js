@@ -10,6 +10,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+const listofTeam = [];
+
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
@@ -41,3 +43,100 @@ const managerQuestions = [
         message: "What is your manager's office number?",
     }
 ];
+
+// additional questions for adding new Engineer
+const engineerQuestions = [
+
+    {
+        type: "input",
+        name: "github",
+        message: "What is your engineer's github username?",
+    }
+];
+
+// additional question & options for selecting new employee type
+
+const selectEmployeeType = [
+    {
+        type: "list",
+        name: "add",
+        message: "Which type of team member would you like to add?",
+        choices: [
+            "Engineer",
+            "Intern",
+            "I don't want to add any more team members"
+        ],
+    }
+];
+
+// additional questions for adding new Intern
+const internQuestions = [
+    {
+        type: "input",
+        name: "school",
+        message: "What is your intern's school?",
+    }
+];
+
+function init() {
+    console.log ("Please create your team:")
+    inquirer.prompt(employeeQuestions).then((answers) => {
+        console.log(answers);
+        addManager();
+        });
+
+};
+
+function addManager(){
+    inquirer.prompt(managerQuestions).then((answers) => {
+        console.log(answers);  
+        // new instance of a manager
+        // add to the array listofTeam
+        options();
+    });
+};
+
+function addEngineer(){
+    inquirer.prompt(employeeQuestions).then((answers) => {
+        console.log(answers);
+        inquirer.prompt(engineerQuestions).then((answers) => {
+            console.log(answers);
+            // new instance of a engineer
+            // add to the array listofTeam
+        options()
+        });
+    });
+};
+
+function addIntern(){
+    inquirer.prompt(employeeQuestions).then((answers) => {
+        console.log(answers);
+        inquirer.prompt(internQuestions).then((answers) => {
+            console.log(answers);
+            // new instance of a engineer
+            // add to the array listofTeam
+        options()
+        });
+    });
+};
+
+function options() {
+    inquirer.prompt(selectEmployeeType).then((answers) => {
+        console.log(answers);
+        if (answers.add === 'Engineer') {
+            addEngineer()
+        }
+        else if (answers.add === "Intern"){
+            addIntern()
+        }
+        else{
+            console.log("Finish ... here we create the html file");
+            // render()
+        };
+    });
+};
+
+
+// function call to initialize program
+init();
+
