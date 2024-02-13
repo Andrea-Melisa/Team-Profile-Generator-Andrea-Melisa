@@ -74,9 +74,9 @@ This here is the challenge number ten from the bootcamp. In this case I want to 
   ## Usage
   Execute "node index.js" in the terminal.
  
-  Here you have a few screenshots of the HTML generated:
+  Here you have a screenshot of the HTML generated:
 
-![web intro](Assets/Screenshots/Questions.png)
+![web intro](/Team-Profile-Generator-Andrea-Melisa/assets/Screenshot.png)
 
 
 **Here is the link to this project** https://github.com/Andrea-Melisa/Team-Profile-Generator-Andrea-Melisa

@@ -46,7 +46,6 @@ const managerQuestions = [
 
 // additional questions for adding new Engineer
 const engineerQuestions = [
-
     {
         type: "input",
         name: "github",
@@ -79,19 +78,14 @@ const internQuestions = [
 ];
 
 function init() {
-    console.log ("Please create your team:")
-    inquirer.prompt(employeeQuestions).then((answers) => {
-        console.log(answers);
+    console.log ("Please create your team, you start with the manager")
         addManager();
-        });
-
 };
 
 function addManager(){
-    inquirer.prompt(managerQuestions).then((answers) => {
+    const manQuestions = employeeQuestions.concat(managerQuestions)
+    inquirer.prompt(manQuestions).then((answers) => {
         console.log(answers);  
-        // new instance of a manager
-        // add to the array listofTeam
         const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
         listofTeam.push(manager);
         options();
@@ -100,32 +94,24 @@ function addManager(){
 };
 
 function addEngineer(){
-    inquirer.prompt(employeeQuestions).then((answers) => {
+    const engQuestions = employeeQuestions.concat(engineerQuestions)
+    inquirer.prompt(engQuestions).then((answers) => {
         console.log(answers);
-        inquirer.prompt(engineerQuestions).then((answers) => {
-            console.log(answers);
-            // new instance of a engineer
-            // add to the array listofTeam
-            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
-            listofTeam.push(engineer);
+        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+        listofTeam.push(engineer);
         options()
-        });
     });
     // .catch((err) => console.error(err));
 };
 
 function addIntern(){
-    inquirer.prompt(employeeQuestions).then((answers) => {
+    const intQuestions = employeeQuestions.concat(internQuestions)
+    inquirer.prompt(intQuestions).then((answers) => {
         console.log(answers);
-        inquirer.prompt(internQuestions).then((answers) => {
-            console.log(answers);
-            // new instance of a engineer
-            // add to the array listofTeam
-            const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
-            listofTeam.push(intern);
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+        listofTeam.push(intern);
         options()
         });
-    });
     // .catch((err) => console.error(err));
 };
 
@@ -147,6 +133,7 @@ function options() {
 
 function createHTML(){
     const html = render(listofTeam);
+    console.log(html)
     fs.writeFileSync(outputPath, html);
     console.log('HTML file generated successfully!');
 };
