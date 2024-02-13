@@ -1,14 +1,12 @@
-# Module 12 Object-Oriented Programming: Team Profile Generator
+# Team Profile Generator Andrea Melisa
 
-## Your Task
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.
+## Description
 
-## User Story
+This here is the challenge number ten from the bootcamp. In this case I want to create a command-line application that will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
-As a manager a user want to generate a webpage that displays my team's basic info so that a user have quick access to their emails and GitHub profiles.
-
-## Instructions
+## Acceptance Criteria
 
 * Create a command-line application that accepts accepts user input using the provided starter code.   
   * Create classes for each team member provided and export them. The tests for these classes (in the `_tests_` directory) must ALL pass.     
@@ -60,83 +58,45 @@ As a manager a user want to generate a webpage that displays my team's basic inf
     * Write it to a file named `team.html` in the `output` folder. 
     * You can use the provided variable `outputPath` to target this location.
 
----
+## Table of Contents
+  1. [Installation](#installation)
+  2. [Usage](#usage)
+  3. [License](#license)
+  4. [Contributing](#contributing)
+  5. [Tests](#tests)
+  6. [Credits](#credits)
+  7. [Badges](#badges)
+  8. [Questions](#questions)
 
-## Mock-Up
+  ## Installation
+  n/a
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
-
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/14-object-oriented-programming-challenge-demo.png)
-
-The styling in the image is just an example, so feel free to add your own.
-
----
-
-## Getting Started
-
-This Challenge will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
-
-Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
-
-```bash
-node index.js
-```
-
----
-
-## Hints
-
-* You will want to make your methods as pure as possible. This means try to make your methods simple so that they are easier to test.
-
-* The different employee types should all inherit some methods and properties from a base class of `Employee`.
+  ## Usage
+  Execute "node index.js" in the terminal.
  
-* Be sure to test out each class and verify it generates an object with the correct structure and methods. This structure will be crucial in order for the provided `render` function to work!
-  
-* You may need to check if the `output` folder exists and create it if it does not.
+  Here you have a few screenshots of the HTML generated:
 
----
+![web intro](Assets/Screenshots/Questions.png)
 
-## Grading Requirements
 
-This Challenge is graded based on the following criteria: 
+**Here is the link to this project** https://github.com/Andrea-Melisa/Team-Profile-Generator-Andrea-Melisa
 
-### Deliverables: 25%
+  ## License 
+  This project is licensed under the MIT license.
 
-* A sample HTML file generated using the application must be submitted.
+  ## Contributing
+  Yes.
 
-* Your GitHub repository containing your application code.
+  ## Tests
+  No specific tests have been written for this project yet.
 
-### Technical Acceptance Criteria: 50%
+  ## Credits
+  Thanks to the instructor Laura Cole and to the TA Martin William from EDX for all their knowledge and support. Thank you for the tutor Juan Delgado and a big thank you to Marcos Z. as allways.
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+  ## Badges
+  [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![Node.js](https://img.shields.io/badge/Node.js-v14-green)](https://nodejs.org/)
+  [![Git](https://img.shields.io/badge/Git-v2.32-blue)](https://git-scm.com/)
 
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-	* All tests pass using the [Jest package](https://www.npmjs.com/package/jest).
-
-  * The application must have `Employee`, `Manager`, `Engineer`, and `Intern` classes.
-
-### Repository Quality: 25%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality readme with description.
-
----
-
-## Review
-
-You are required to submit the following for review:
-
-* A sample HTML file generated using your application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+  ## Questions
+  If you have any questions about this repo you can contact me directly at [andream_dearth@hotmail.com](mailto:andream_dearth@hotmail.com). Here you can find more of my work at [Andrea-Melisa](https://www.github.com/Andrea-Melisa).
