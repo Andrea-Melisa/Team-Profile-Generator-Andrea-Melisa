@@ -92,8 +92,11 @@ function addManager(){
         console.log(answers);  
         // new instance of a manager
         // add to the array listofTeam
+        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+        listofTeam.push(manager);
         options();
     });
+    // .catch((err) => console.error(err));
 };
 
 function addEngineer(){
@@ -103,9 +106,12 @@ function addEngineer(){
             console.log(answers);
             // new instance of a engineer
             // add to the array listofTeam
+            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+            listofTeam.push(engineer);
         options()
         });
     });
+    // .catch((err) => console.error(err));
 };
 
 function addIntern(){
@@ -115,9 +121,12 @@ function addIntern(){
             console.log(answers);
             // new instance of a engineer
             // add to the array listofTeam
+            const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+            listofTeam.push(intern);
         options()
         });
     });
+    // .catch((err) => console.error(err));
 };
 
 function options() {
@@ -131,11 +140,16 @@ function options() {
         }
         else{
             console.log("Finish ... here we create the html file");
-            // render()
+            createHTML();
         };
     });
 };
 
+function createHTML(){
+    const html = render(listofTeam);
+    fs.writeFileSync(outputPath, html);
+    console.log('HTML file generated successfully!');
+};
 
 // function call to initialize program
 init();
