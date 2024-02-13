@@ -78,7 +78,7 @@ const internQuestions = [
 ];
 
 function init() {
-    console.log ("Please create your team, you start with the manager")
+    console.log ("Please create your team, start with the manager.")
         addManager();
 };
 
@@ -90,7 +90,7 @@ function addManager(){
         listofTeam.push(manager);
         options();
     });
-    // .catch((err) => console.error(err));
+        .catch((err) => console.error(err));
 };
 
 function addEngineer(){
@@ -101,7 +101,7 @@ function addEngineer(){
         listofTeam.push(engineer);
         options()
     });
-    // .catch((err) => console.error(err));
+    .catch((err) => console.error(err));
 };
 
 function addIntern(){
@@ -112,7 +112,7 @@ function addIntern(){
         listofTeam.push(intern);
         options()
         });
-    // .catch((err) => console.error(err));
+        .catch((err) => console.error(err));
 };
 
 function options() {
@@ -129,11 +129,11 @@ function options() {
             createHTML();
         };
     });
+        .catch((err) => console.error(err));
 };
 
 function createHTML(){
     const html = render(listofTeam);
-    console.log(html)
     fs.writeFileSync(outputPath, html);
     console.log('HTML file generated successfully!');
 };
