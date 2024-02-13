@@ -76,7 +76,7 @@ This here is the challenge number ten from the bootcamp. In this case I want to 
  
   Here you have a screenshot of the HTML generated:
 
-![web intro](/Team-Profile-Generator-Andrea-Melisa/assets/Screenshot.png)
+![web intro](./assets/Screenshot.png)
 
 
 **Here is the link to this project** https://github.com/Andrea-Melisa/Team-Profile-Generator-Andrea-Melisa
