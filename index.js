@@ -89,7 +89,7 @@ function addManager(){
         const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
         listofTeam.push(manager);
         options();
-    });
+    })
         .catch((err) => console.error(err));
 };
 
@@ -100,7 +100,7 @@ function addEngineer(){
         const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
         listofTeam.push(engineer);
         options()
-    });
+    })
     .catch((err) => console.error(err));
 };
 
@@ -111,7 +111,7 @@ function addIntern(){
         const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
         listofTeam.push(intern);
         options()
-        });
+        })
         .catch((err) => console.error(err));
 };
 
@@ -128,7 +128,7 @@ function options() {
             console.log("Finish ... here we create the html file");
             createHTML();
         };
-    });
+    })
         .catch((err) => console.error(err));
 };
 
